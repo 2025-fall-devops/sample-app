@@ -13,7 +13,9 @@ const server = http.createServer(
         res.end(
 `Hello, World ! ! !
 
-The time on the server is ${new Date().toLocaleString()}`
+The time on the server is ${new Date().toLocaleString()}
+
+The D6 rolled a ${2 + 2}`
         );
     }
 );
