@@ -20,7 +20,7 @@ The D6 rolled a ${Math.floor(Math.random() * 6) + 1}`
 	}
 );
 
-// Get port from .env file, or uses port 8080 in not in .env file...
+// Get port from .env file, or uses port 8080 if not in .env file...
 const port = process.env.PORT || 8080;
 
 server.listen(
