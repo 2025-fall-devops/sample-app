@@ -1,7 +1,3 @@
-provider "aws" {                                               
-  region = "us-east-1"
-}
-
 resource "aws_security_group" "sample_app" {                   
   name        = var.name
   description = "Allow HTTP traffic into ${var.name}"
