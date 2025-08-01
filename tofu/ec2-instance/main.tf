@@ -33,6 +33,7 @@ resource "aws_instance" "sample_app" {
 
   tags = {
     Name = var.name
+    Test = "update"
   }
 
 }
