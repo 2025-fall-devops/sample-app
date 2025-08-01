@@ -12,9 +12,9 @@ const server =
 
 The time on the server is ${new Date().toLocaleString()}
 
-The D6 rolled a ${
+The D20 rolled a ${
 					Math.floor(
-						Math.random() * 6,
+						Math.random() * 20,
 					) + 1
 				}`,
 			);

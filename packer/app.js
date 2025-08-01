@@ -1,1 +1,0 @@
-/home/cloudshell-user/sample-app/src/app.js

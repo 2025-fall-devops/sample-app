@@ -29,7 +29,7 @@ build {
   sources = ["source.amazon-ebs.amazon-linux"]
 
   provisioner "file" {                                
-    source      = "app.js"
+    source      = "../src/app.js"
     destination = "/home/ec2-user/app.js"
   }
 
