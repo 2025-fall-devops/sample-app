@@ -13,7 +13,9 @@ const server = http.createServer(
         res.end(
 `Hello, World of DevOps!
 
-The server time is ${new Date().toLocaleString()}`
+The server time is ${new Date().toLocaleString()}
+
+The D6 rolled a ${Math.floor(Math.random() * 6) + 1}`
         );
     }
 );
