@@ -11,7 +11,9 @@ const server = http.createServer(
             }
         );
         res.end(
-            'Hello, World of DevOps!\n'
+`Hello, World of DevOps!
+
+The server time is ${new Date().toLocaleString()}`
         );
     }
 );
