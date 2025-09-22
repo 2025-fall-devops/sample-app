@@ -12,7 +12,9 @@ const server = http.createServer(
         res.end(
 `Hello, World!!!
 
-The time on the server is ${new Date().toLocaleString()}`
+The time on the server is ${new Date().toLocaleString()}
+
+The D6 rolled a ${Math.floor(Math.random() * 20) + 1 }`
         );
     }
 );
