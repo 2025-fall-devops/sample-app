@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#Works for multiple deployments of the same app
 set -e
 
 export AWS_DEFAULT_REGION="us-east-1"
@@ -73,3 +73,4 @@ echo "Instance Name = $instance_name"
 echo "Instance ID = $instance_id"
 echo "Security Group ID = $security_group_id"
 echo "Public IP = $public_ip"
+
