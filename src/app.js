@@ -21,3 +21,4 @@ server.listen(port,() => {
 });
 
 // Symlinks ./sample-app/src/app.js & ./sample-app/ansible/ro les/sample-app/files/app.js
+// Created using command: ln -s ../src/app.js ansible/roles/sample-app/files/app.js (example)
