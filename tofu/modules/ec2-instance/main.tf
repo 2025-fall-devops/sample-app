@@ -1,6 +1,4 @@
-provider "aws" {                                               
-  region = "us-east-1"
-}
+
 
 resource "aws_security_group" "sample_app" {                   
   name        = var.name
@@ -34,7 +32,7 @@ resource "aws_instance" "sample_app" {
   tags = {
     Name = var.name
     Test = "update"
-    Test2 = "ec2"
+    
   }
 
 }
