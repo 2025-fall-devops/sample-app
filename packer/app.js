@@ -1,1 +1,1 @@
-/home/ec2-user/sample-app/src/app.js
+../src/app.js

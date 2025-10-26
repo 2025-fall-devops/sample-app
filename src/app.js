@@ -20,5 +20,5 @@ server.listen(port,() => {
   console.log(`Listening on port ${port}`);
 });
 
-// Symlinks ./sample-app/src/app.js & ./sample-app/ansible/ro les/sample-app/files/app.js
+// Symlinks ./sample-app/src/app.js & ./sample-app/ansible/ro les/sample-app/files/app.js & ../../Packer
 // Created using command: ln -s ../src/app.js ansible/roles/sample-app/files/app.js (example)

@@ -1,0 +1,43 @@
+#Node Js
+Node JS install:
+
+sudo tee /etc/yum.repos.d/nodesource-nodejs.repo > /dev/null <<EOF
+[nodesource-nodejs]
+baseurl=https://rpm.nodesource.com/pub_23.x/nodistro/nodejs/x86_64
+gpgkey=https://rpm.nodesource.com/gpgkey/ns-operations-public.key
+EOF
+sudo yum install -y nodejs
+
+
+
+
+
+#Packer
+Packer install:
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum install packer
+
+
+
+
+
+#Tofu
+OpenTofu installer:
+# Download the installer script:
+curl --proto '=https' --tlsv1.2 -fsSL https://get.opentofu.org/install-opentofu.sh -o install-opentofu.sh
+# Alternatively: wget --secure-protocol=TLSv1_2 --https-only https://get.opentofu.org/install-opentofu.sh -O install-opentofu.sh
+
+# Give it execution permissions:
+chmod +x install-opentofu.sh
+
+# Please inspect the downloaded script
+
+# Run the installer:
+./install-opentofu.sh --install-method rpm
+
+# Remove the installer:
+rm -f install-opentofu.sh
+
+
+
