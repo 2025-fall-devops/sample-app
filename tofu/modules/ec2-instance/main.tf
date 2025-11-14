@@ -1,7 +1,3 @@
-provider "aws" {                                               
-  region = "us-east-1"
-}
-
 resource "aws_security_group" "sample_app" {                   
   name        = var.name
   description = "Allow HTTP traffic into ${var.name}"
@@ -33,7 +29,6 @@ resource "aws_instance" "sample_app" {
 
   tags = {
     Name = var.name
-    Test = "update"
   }
 
 }
