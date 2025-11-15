@@ -1,1 +1,1 @@
-/home/cloudshell-user/sample-app/src/app.js
+/home/ec2-user/sample-app/src/app.js
