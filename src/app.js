@@ -1,22 +1,35 @@
+const asciify = require('asciify');
 const http = require('http');
 
 const server =
 	http.createServer(
 		(req, res) => {
-			res.writeHead(200, {
-				'Content-Type':
-					'text/plain',
-			});
-			res.end(
-				`Hello, World ! ! !
+
+			let coolLookingText = "";
+
+			asciify(
+				"DevOps",
+				{ 
+					font: 'chunky',
+				},
+				(err, ares) => {
+					coolLookingText = ares;
+					res.writeHead(200, {
+						'Content-Type':
+							'text/plain',
+					});
+					res.end(
+						`${coolLookingText}
 
 The time on the server is ${new Date().toLocaleString()}
 
 The D20 rolled a ${
-					Math.floor(
-						Math.random() * 20,
-					) + 1
-				}`,
+	Math.floor(
+		Math.random() * 20,
+	) + 1
+}`,
+					);
+				}
 			);
 		},
 	);
