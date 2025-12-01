@@ -1,30 +1,34 @@
-const http = require(
-    'http'
-);
+const http = require('http');
 
-const server = http.createServer(
-    (req, res) => {
-        res.writeHead(
-            200, {
-                    'Content-Type': 'text/plain' 
-                }
-            );
-        res.end(
-`Hello, World!!!
+const server =
+	http.createServer(
+		(req, res) => {
+			res.writeHead(200, {
+				'Content-Type':
+					'text/plain',
+			});
+			res.end(
+				`Hello, World ! ! !
 
 The time on the server is ${new Date().toLocaleString()}
 
-The D20 rolled a ${Math.floor(Math.random() * 20) + 1 }`
-        );
-    }
-);
+The D20 rolled a ${
+					Math.floor(
+						Math.random() * 20,
+					) + 1
+				}`,
+			);
+		},
+	);
 
-const port = process.env.PORT || 80;
-server.listen(
-    port
-    , () => {
-        console.log(
-            `listening on port ${port}`
-        );
-    }
-);
+// Get port from .env file, or uses port 8080 if not in .env file...
+const port =
+	process.env.PORT || 8080;
+
+server.listen(port, () => {
+	console.log(
+		`Listening on port ${port}`,
+	);
+});
+
+// Comment at the end, testing the symlink...
