@@ -1,14 +1,21 @@
 const http = require('http');
+const asciify = require('asciify');
 
 const server =
 	http.createServer(
 		(req, res) => {
-			res.writeHead(200, {
-				'Content-Type':
-					'text/plain',
-			});
-			res.end(
-				`Hello, World ! ! !
+			asciify(
+				"DevOps",
+				{
+					font: "chunky"
+				},
+				(err, asciifyText) =>{
+					res.writeHead(200, {
+						'Content-Type':
+							'text/plain',
+					});
+					res.end(
+						`${asciifyText}
 
 The time on the server is ${new Date().toLocaleString()}
 
@@ -17,7 +24,11 @@ The D20 rolled a ${
 						Math.random() * 20,
 					) + 1
 				}`,
+					);
+				}
 			);
+
+
 		},
 	);
 
