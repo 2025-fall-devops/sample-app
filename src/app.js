@@ -1,15 +1,26 @@
 const http = require('http');
+const asciify = require('asciify');
 
 const server =
 	http.createServer(
 		(req, res) => {
-			res.writeHead(200, {
-				'Content-Type':
-					'text/plain',
-			});
-			res.end(
-				`Hello, World ! ! !
 
+			let coolLookingText = "";
+
+			asciify(
+				"DevOps",
+				{ 
+					font: 'larry3d',
+				},
+				(err, ares) => {
+					coolLookingText = ares;
+					res.writeHead(200, {
+						'Content-Type':
+							'text/plain',
+					});
+					res.end(
+						`${coolLookingText}
+					
 The time on the server is ${new Date().toLocaleString()}
 
 The D20 rolled a ${
@@ -20,6 +31,8 @@ The D20 rolled a ${
 			);
 		},
 	);
+		},
+);
 
 // Get port from .env file, or uses port 8080 if not in .env file...
 const port =
@@ -31,4 +44,4 @@ server.listen(port, () => {
 	);
 });
 
-// Comment at the end, testing the symlink...
+// Comment at the end, testing the symlink..
