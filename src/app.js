@@ -10,7 +10,7 @@ const server =
 			asciify(
 				"DevOps",
 				{
-					font: "chunky",
+					font: "stellar",
 				},
 				(err, asciifyText) => {
 					res.writeHead(200, {
